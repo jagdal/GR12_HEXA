@@ -1,0 +1,378 @@
+{
+  "model": "qwen2.5:3b",
+  "embed_model": "nomic-embed-text",
+  "size_gb": 1.93,
+  "ram_gb": 2.17,
+  "load_seconds": 8.7,
+  "accuracy": 0.969,
+  "refusal_rate": 1.0,
+  "overall": 0.972,
+  "median_seconds": 20.7,
+  "mean_seconds": 20.89,
+  "gen_tps": 12.4,
+  "prompt_tps": 61.6,
+  "n_answerable": 32,
+  "n_unanswerable": 4,
+  "rows": [
+    {
+      "q": "Quel a été le chiffre d'affaires de Givaudan en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le chiffre d'affaires de Givaudan en 2025 était de 7 472 millions de CHF.",
+      "seconds": 22.53,
+      "gen_tokens": 31,
+      "gen_tps": 10.9,
+      "prompt_tps": 60.5
+    },
+    {
+      "q": "Quelle a été la croissance like-for-like de Givaudan en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "En 2025, la croissance like-for-like de Givaudan était de 5,1 %.",
+      "seconds": 16.41,
+      "gen_tokens": 26,
+      "gen_tps": 11.8,
+      "prompt_tps": 83.5
+    },
+    {
+      "q": "Quel dividende par action Givaudan propose-t-il pour l'exercice 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le conseil d'administration de Givaudan a proposé un dividende de 72 CHF par action pour l'exercice 2025, en hausse de 2,9 % par rapport au dividende de 70 CHF par action de l'année précédente.",
+      "seconds": 26.28,
+      "gen_tokens": 65,
+      "gen_tps": 11.8,
+      "prompt_tps": 59.2
+    },
+    {
+      "q": "Qui est le CEO de Givaudan depuis mars 2026 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le CEO de Givaudan depuis mars 2026 est Christian Stammkoetter.",
+      "seconds": 18.81,
+      "gen_tokens": 22,
+      "gen_tps": 13.6,
+      "prompt_tps": 62.2
+    },
+    {
+      "q": "En quelle année Givaudan a-t-elle été fondée ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Givaudan a été fondée en 1895.",
+      "seconds": 16.97,
+      "gen_tokens": 16,
+      "gen_tps": 14.6,
+      "prompt_tps": 68.7
+    },
+    {
+      "q": "Quelle a été la croissance de la parfumerie fine (Fine Fragrance) en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "La parfumerie fine (Fine Fragrance) a progressé de 18,3 % en 2025 à périmètre constant.",
+      "seconds": 21.06,
+      "gen_tokens": 34,
+      "gen_tps": 9.6,
+      "prompt_tps": 55.7
+    },
+    {
+      "q": "Quel était le bénéfice net de Givaudan au premier semestre 2026 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le bénéfice net de Givaudan au premier semestre 2026 était de 475 millions de CHF.",
+      "seconds": 25.57,
+      "gen_tokens": 31,
+      "gen_tps": 11.8,
+      "prompt_tps": 55.7
+    },
+    {
+      "q": "En quelle année Givaudan vise-t-elle le net zéro sur sa chaîne de valeur ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Givaudan vise la neutralité carbone (net zéro) sur toute sa chaîne de valeur d'ici 2045.",
+      "seconds": 26.17,
+      "gen_tokens": 34,
+      "gen_tps": 10.0,
+      "prompt_tps": 50.3
+    },
+    {
+      "q": "Qui sont les principaux concurrents de Givaudan ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Les principaux concurrents de Givaudan sur le marché des arômes et parfums sont dsm-firmenich (Suisse et Pays-Bas), IFF (International Flavors & Fragrances, États-Unis) et Symrise (Allemagne).",
+      "seconds": 23.77,
+      "gen_tokens": 61,
+      "gen_tps": 12.1,
+      "prompt_tps": 57.1
+    },
+    {
+      "q": "Quel était le chiffre d'affaires de Givaudan sur les neuf premiers mois de 2026 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le chiffre d'affaires de Givaudan sur les neuf premiers mois de 2026 était de 5 891 millions de CHF.",
+      "seconds": 22.49,
+      "gen_tokens": 38,
+      "gen_tps": 12.3,
+      "prompt_tps": 59.5
+    },
+    {
+      "q": "Quel était le ratio dette nette sur EBITDA de Givaudan à fin 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le ratio dette nette sur EBITDA de Givaudan à fin 2025 était de 2,1.",
+      "seconds": 24.66,
+      "gen_tokens": 29,
+      "gen_tps": 7.9,
+      "prompt_tps": 65.4
+    },
+    {
+      "q": "Quel était l'EBITDA de Givaudan en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "L'EBITDA de Givaudan en 2025 était de 1 751 millions de CHF.",
+      "seconds": 31.85,
+      "gen_tokens": 30,
+      "gen_tps": 10.9,
+      "prompt_tps": 44.1
+    },
+    {
+      "q": "Quel a été le free cash flow de Givaudan en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le free cash flow de Givaudan en 2025 était de 1 053 millions de CHF.",
+      "seconds": 27.53,
+      "gen_tokens": 29,
+      "gen_tps": 12.4,
+      "prompt_tps": 47.2
+    },
+    {
+      "q": "Quel était le chiffre d'affaires de la division Fragrance & Beauty en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le chiffre d'affaires de la division Fragrance & Beauty en 2025 était de 3 830 millions de CHF.",
+      "seconds": 22.75,
+      "gen_tokens": 33,
+      "gen_tps": 12.5,
+      "prompt_tps": 53.0
+    },
+    {
+      "q": "Quel était le chiffre d'affaires de la division Taste & Wellbeing en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le chiffre d'affaires de la division Taste & Wellbeing en 2025 était de 3 642 millions de CHF.",
+      "seconds": 20.31,
+      "gen_tokens": 33,
+      "gen_tps": 13.1,
+      "prompt_tps": 60.5
+    },
+    {
+      "q": "Quelle région a le plus progressé dans la division Taste & Wellbeing en 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "En 2025, la région Asie du Sud, Moyen-Orient et Afrique (SAMEA) a été la plus dynamique pour la division Taste & Wellbeing, avec une croissance de 7,8 %.",
+      "seconds": 22.16,
+      "gen_tokens": 50,
+      "gen_tps": 13.3,
+      "prompt_tps": 62.8
+    },
+    {
+      "q": "En quelle année Roche a-t-il racheté Givaudan ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "En 1963, Roche a racheté Givaudan.",
+      "seconds": 19.37,
+      "gen_tokens": 20,
+      "gen_tps": 13.5,
+      "prompt_tps": 61.0
+    },
+    {
+      "q": "En quelle année Givaudan a-t-elle été séparée de Roche et cotée en bourse ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Givaudan a été séparée de Roche et est devenue une société indépendante cotée à la bourse suisse en 2000.",
+      "seconds": 11.91,
+      "gen_tokens": 38,
+      "gen_tps": 11.9,
+      "prompt_tps": 121.1
+    },
+    {
+      "q": "Quelle société Givaudan a-t-elle rachetée en 2007 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "En 2007, Givaudan a racheté Quest International, une société de parfums et d'arômes basée aux Pays-Bas, pour environ 2,8 milliards de francs suisses.",
+      "seconds": 20.63,
+      "gen_tokens": 53,
+      "gen_tps": 11.1,
+      "prompt_tps": 70.6
+    },
+    {
+      "q": "Dans quelle ville se trouve le siège de Givaudan ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le siège de Givaudan se trouve à Vernier, dans le canton de Genève, en Suisse.",
+      "seconds": 20.06,
+      "gen_tokens": 27,
+      "gen_tps": 12.7,
+      "prompt_tps": 58.3
+    },
+    {
+      "q": "Combien d'employés Givaudan comptait-elle à fin 2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "À fin 2025, Givaudan employait environ 17 600 collaborateurs.",
+      "seconds": 18.8,
+      "gen_tokens": 26,
+      "gen_tps": 13.0,
+      "prompt_tps": 71.0
+    },
+    {
+      "q": "Quelle a été la croissance like-for-like de Givaudan au troisième trimestre 2026 ?",
+      "answerable": true,
+      "ok": false,
+      "answer": "Le dossier ne le précise pas.",
+      "seconds": 19.73,
+      "gen_tokens": 9,
+      "gen_tps": 13.6,
+      "prompt_tps": 60.4
+    },
+    {
+      "q": "Depuis quelle année toute l'électricité de Givaudan est-elle renouvelable ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Depuis 2024, toute l'électricité utilisée par Givaudan provient de sources renouvelables.",
+      "seconds": 15.5,
+      "gen_tokens": 30,
+      "gen_tps": 12.3,
+      "prompt_tps": 94.4
+    },
+    {
+      "q": "Quel pourcentage des postes de direction est occupé par des femmes chez Givaudan ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "34 % des postes de direction (senior leadership) chez Givaudan sont occupés par des femmes.",
+      "seconds": 22.51,
+      "gen_tokens": 26,
+      "gen_tps": 7.2,
+      "prompt_tps": 51.5
+    },
+    {
+      "q": "Quel est l'objectif de croissance des ventes de la stratégie 2030 de Givaudan ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "L'objectif de croissance des ventes de la stratégie 2030 de Givaudan est une croissance moyenne de 4 à 6 % par an à périmètre constant.",
+      "seconds": 32.13,
+      "gen_tokens": 45,
+      "gen_tps": 10.4,
+      "prompt_tps": 40.2
+    },
+    {
+      "q": "Quelle a été la croissance moyenne des ventes de Givaudan sur la période 2021-2025 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "La croissance moyenne des ventes de Givaudan sur la période 2021-2025 était de 6,8 % par an à périmètre constant.",
+      "seconds": 23.97,
+      "gen_tokens": 42,
+      "gen_tps": 11.4,
+      "prompt_tps": 65.0
+    },
+    {
+      "q": "Quel était le chiffre d'affaires de Givaudan en 2024 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "En 2024, Givaudan a réalisé un chiffre d'affaires de 7 412 millions de francs suisses (CHF).",
+      "seconds": 21.75,
+      "gen_tokens": 37,
+      "gen_tps": 12.4,
+      "prompt_tps": 65.0
+    },
+    {
+      "q": "En quelle année Givaudan a-t-elle racheté Naturex ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Givaudan a racheté Naturex en 2018.",
+      "seconds": 20.77,
+      "gen_tokens": 19,
+      "gen_tps": 12.8,
+      "prompt_tps": 57.6
+    },
+    {
+      "q": "Quelle était la dette nette de Givaudan au 30 juin 2026 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "La dette nette de Givaudan au 30 juin 2026 était de 4 604 millions de CHF.",
+      "seconds": 17.75,
+      "gen_tokens": 33,
+      "gen_tps": 11.2,
+      "prompt_tps": 81.5
+    },
+    {
+      "q": "Quelle était la marge EBITDA ajustée de Givaudan au premier semestre 2026 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "La marge EBITDA ajustée de Givaudan au premier semestre 2026 était de 24,3 %.",
+      "seconds": 23.45,
+      "gen_tokens": 31,
+      "gen_tps": 13.2,
+      "prompt_tps": 60.7
+    },
+    {
+      "q": "Quel était le chiffre d'affaires de la région Asie-Pacifique au premier semestre 2026 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Le chiffre d'affaires de la région Asie-Pacifique au premier semestre 2026 était de 909 millions de CHF.",
+      "seconds": 18.95,
+      "gen_tokens": 35,
+      "gen_tps": 13.6,
+      "prompt_tps": 69.0
+    },
+    {
+      "q": "De combien Givaudan a-t-elle réduit ses émissions des scopes 1 et 2 par rapport à 2015 ?",
+      "answerable": true,
+      "ok": true,
+      "answer": "Givaudan a réduit ses émissions de gaz à effet de serre des scopes 1 et 2 de 50 % par rapport à l'année de référence 2015.",
+      "seconds": 17.31,
+      "gen_tokens": 44,
+      "gen_tps": 12.9,
+      "prompt_tps": 91.0
+    },
+    {
+      "q": "Quel est le salaire annuel du CEO de Givaudan ?",
+      "answerable": false,
+      "ok": true,
+      "answer": "Le dossier ne précise pas le salaire annuel du CEO de Givaudan.",
+      "seconds": 12.52,
+      "gen_tokens": 20,
+      "gen_tps": 14.4,
+      "prompt_tps": 91.7
+    },
+    {
+      "q": "Quel est le cours de l'action Givaudan aujourd'hui ?",
+      "answerable": false,
+      "ok": true,
+      "answer": "Le cours de l'action Givaudan n'est pas fourni dans les extraits du dossier Givaudan.",
+      "seconds": 18.08,
+      "gen_tokens": 26,
+      "gen_tps": 12.3,
+      "prompt_tps": 66.5
+    },
+    {
+      "q": "Combien de brevets Givaudan a-t-elle déposés en 2025 ?",
+      "answerable": false,
+      "ok": true,
+      "answer": "Le dossier ne le précise pas.",
+      "seconds": 19.31,
+      "gen_tokens": 9,
+      "gen_tps": 14.1,
+      "prompt_tps": 83.2
+    },
+    {
+      "q": "Quel sera le chiffre d'affaires de Givaudan en 2027 ?",
+      "answerable": false,
+      "ok": true,
+      "answer": "Le dossier ne précise pas le chiffre d'affaires de Givaudan en 2027.",
+      "seconds": 8.19,
+      "gen_tokens": 25,
+      "gen_tps": 13.7,
+      "prompt_tps": 198.3
+    }
+  ]
+}

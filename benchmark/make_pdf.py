@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 from datetime import date
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 import matplotlib
 
@@ -36,6 +37,10 @@ OUT = ROOT / "benchmark_llm.pdf"
 _dejavu = Path(font_manager.findfont("DejaVu Sans"))
 pdfmetrics.registerFont(TTFont("DejaVu", str(_dejavu)))
 pdfmetrics.registerFont(TTFont("DejaVu-Bold", str(_dejavu.with_name("DejaVuSans-Bold.ttf"))))
+pdfmetrics.registerFont(TTFont("DejaVu-Italic", str(_dejavu.with_name("DejaVuSans-Oblique.ttf"))))
+pdfmetrics.registerFont(TTFont("DejaVu-BoldItalic", str(_dejavu.with_name("DejaVuSans-BoldOblique.ttf"))))
+pdfmetrics.registerFontFamily("DejaVu", normal="DejaVu", bold="DejaVu-Bold", italic="DejaVu-Italic",
+                              boldItalic="DejaVu-BoldItalic")
 
 ACCENT = colors.HexColor("#C8102E")
 INK = colors.HexColor("#1F2937")
@@ -49,7 +54,7 @@ S = {
     "title": ParagraphStyle("t", parent=ss["Title"], fontName="DejaVu-Bold", fontSize=22, leading=27, textColor=INK, alignment=0, spaceAfter=4),
     "kicker": ParagraphStyle("k", fontName="DejaVu-Bold", fontSize=9, textColor=ACCENT, spaceAfter=6),
     "sub": ParagraphStyle("s", fontName="DejaVu", fontSize=10.5, leading=15, textColor=MUTED, spaceAfter=14),
-    "h1": ParagraphStyle("h1", fontName="DejaVu-Bold", fontSize=15, leading=19, textColor=INK, spaceBefore=14, spaceAfter=8),
+    "h1": ParagraphStyle("h1", fontName="DejaVu-Bold", fontSize=15, leading=19, textColor=INK, spaceBefore=14, spaceAfter=8, keepWithNext=1),
     "h2": ParagraphStyle("h2", fontName="DejaVu-Bold", fontSize=11.5, leading=15, textColor=INK, spaceBefore=10, spaceAfter=5),
     "p": ParagraphStyle("p", fontName="DejaVu", fontSize=9.5, leading=14, textColor=INK, spaceAfter=6),
     "small": ParagraphStyle("sm", fontName="DejaVu", fontSize=8, leading=11, textColor=MUTED),
@@ -116,7 +121,7 @@ def chart_llm(llms):
     for i, r in enumerate(llms):
         ax.text(r["accuracy"] * 100 + 1, i + 0.2, f"{r['accuracy'] * 100:.0f}", va="center", fontsize=8, color=DARK)
         ax.text(r["refusal_rate"] * 100 + 1, i - 0.2, f"{r['refusal_rate'] * 100:.0f}", va="center", fontsize=8, color=DARK)
-    ax.legend(loc="lower right", frameon=False, fontsize=8)
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2, frameon=False, fontsize=8)
     fig.tight_layout()
     p = FIG / "llm_quality.png"
     fig.savefig(p, dpi=200)
@@ -151,7 +156,7 @@ def chart_embed(embs):
     ax.set_yticks(list(y), [r["model"] for r in embs])
     ax.set_xlim(0, 105)
     ax.set_xlabel("%")
-    ax.legend(loc="lower right", frameon=False, fontsize=8)
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2, frameon=False, fontsize=8)
     fig.tight_layout()
     p = FIG / "embed_quality.png"
     fig.savefig(p, dpi=200)
@@ -214,9 +219,9 @@ def build():
     story.append(Image(str(chart_llm(llms)), width=16 * cm, height=16 * cm * (0.42 * len(llms) + 0.9) / 7.2))
     story.append(Image(str(chart_tradeoff(llms)), width=16 * cm, height=8 * cm))
 
-    story.append(Paragraph("5. Analyse", S["h1"]))
-    for title, text in A["llm_analysis"]:
-        story.append(KeepTogether([Paragraph(title, S["h2"]), Paragraph(text, S["p"])]))
+    for i, (title, text) in enumerate(A["llm_analysis"]):
+        head = [Paragraph("5. Analyse", S["h1"])] if i == 0 else []
+        story.append(KeepTogether(head + [Paragraph(title, S["h2"]), Paragraph(text, S["p"])]))
 
     story.append(Paragraph("6. Recommandation pour la mission", S["h1"]))
     for para in A["final"]:
@@ -233,16 +238,16 @@ def build():
                            "✗ = réponse fausse, incomplète ou inventée.", S["small"]))
     story.append(Spacer(1, 4))
     names = [r["model"] for r in llms_sorted]
-    head = ["#", "Question"] + [n.replace(":", ":\n") for n in names]
+    head = ["#", "Question"] + [n.replace(":", ":<br/>") for n in names]
     data = [[Paragraph(h, S["cellb"]) for h in head]]
     for qi, row in enumerate(llms_sorted[0]["rows"]):
-        line = [Paragraph(str(qi + 1), S["cell"]), Paragraph(row["q"] + ("" if row["answerable"] else " <i>(piège)</i>"), S["cell"])]
+        line = [Paragraph(str(qi + 1), S["cell"]), Paragraph(escape(row["q"]) + ("" if row["answerable"] else " <i>(piège)</i>"), S["cell"])]
         for r in llms_sorted:
             ok = r["rows"][qi]["ok"]
             line.append(Paragraph(f'<font color="{"#15803D" if ok else "#C8102E"}">{"✓" if ok else "✗"}</font>', S["center"]))
         data.append(line)
-    qw = 17.4 * cm - 0.7 * cm - len(names) * 1.25 * cm
-    t = Table(data, colWidths=[0.7 * cm, qw] + [1.25 * cm] * len(names), repeatRows=1)
+    qw = 17.4 * cm - 0.9 * cm - len(names) * 1.8 * cm
+    t = Table(data, colWidths=[0.9 * cm, qw] + [1.8 * cm] * len(names), repeatRows=1)
     t.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), SOFT), ("GRID", (0, 0), (-1, -1), 0.3, LINE),
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("FONTSIZE", (0, 0), (-1, -1), 7),

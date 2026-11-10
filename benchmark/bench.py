@@ -55,6 +55,7 @@ REFUSAL = [
     "ne figure pas", "pas indique", "ne sais pas", "n'indique pas", "ne permet pas", "pas mentionne",
     "pas d'indication", "aucune donnee", "pas de donnee", "ne specifie pas", "pas specifie", "ne parle pas",
     "n'est pas precise", "pas fourni", "ne peux pas", "impossible de",
+    "ne se trouve pas", "pas trouve", "aucune mention",
 ]
 
 
