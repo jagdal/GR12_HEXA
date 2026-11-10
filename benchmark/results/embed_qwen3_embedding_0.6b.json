@@ -1,0 +1,12 @@
+{
+  "model": "qwen3-embedding:0.6b",
+  "size_gb": 0.64,
+  "n_questions": 32,
+  "n_chunks": 35,
+  "hit_at_1": 0.844,
+  "hit_at_k": 0.875,
+  "k": 4,
+  "mrr": 0.869,
+  "index_seconds": 54.1,
+  "query_ms": 271.0
+}

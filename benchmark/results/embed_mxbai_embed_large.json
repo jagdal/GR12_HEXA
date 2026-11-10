@@ -1,0 +1,12 @@
+{
+  "model": "mxbai-embed-large",
+  "size_gb": 0.67,
+  "n_questions": 32,
+  "n_chunks": 35,
+  "hit_at_1": 0.656,
+  "hit_at_k": 0.938,
+  "k": 4,
+  "mrr": 0.796,
+  "index_seconds": 37.26,
+  "query_ms": 172.6
+}
