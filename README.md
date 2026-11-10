@@ -1,6 +1,7 @@
-# Story RAG API
+# Givaudan RAG API
 
-Pose des questions sur une histoire pour enfants (`story.txt`) via une API FastAPI.
+Pose des questions sur l'entreprise Givaudan (histoire, résultats financiers, stratégie,
+durabilité) à partir d'un dossier d'entreprise (`story.txt`) via une API FastAPI.
 Les passages pertinents sont retrouvés dans une base vectorielle (ChromaDB), puis un
 LLM Ollama rédige la réponse.
 
@@ -8,10 +9,11 @@ LLM Ollama rédige la réponse.
 
 | Fichier            | Rôle |
 |--------------------|------|
-| `story.txt`        | L'histoire pour enfants, source des réponses. Le titre est sur la première ligne, les chapitres commencent par « Chapitre N : … » ou « I. … ». |
-| `ingest.py`        | Charge l'histoire dans la base : découpe le texte par chapitre en morceaux d'environ 800 caractères, calcule leurs embeddings avec Ollama et les enregistre dans ChromaDB. Peut être relancé sans créer de doublons. Accepte un autre fichier en argument : `python ingest.py autre.txt`. |
-| `clean.py`         | Vide la base (supprime la collection ChromaDB), pour recharger l'histoire ou changer de modèle d'embeddings. |
-| `api.py`           | L'API FastAPI avec son Swagger : retrouve les passages proches de la question, puis demande au LLM d'y répondre simplement, comme à un enfant. Contient aussi le prompt système. |
+| `story.txt`        | Le dossier d'entreprise Givaudan (2024 – 2026), source des réponses. Le titre est sur la première ligne, les chapitres commencent par « Chapitre N : … » ou « I. … ». |
+| `ingest.py`        | Charge le dossier dans la base : découpe le texte par chapitre en morceaux d'environ 800 caractères, calcule leurs embeddings avec Ollama et les enregistre dans ChromaDB. Peut être relancé sans créer de doublons. Accepte un autre fichier en argument : `python ingest.py autre.txt`. |
+| `clean.py`         | Vide la base (supprime la collection ChromaDB), pour recharger le dossier ou changer de modèle d'embeddings. |
+| `api.py`           | L'API FastAPI avec son Swagger (chaque champ documenté) : retrouve les passages proches de la question, puis demande au LLM d'y répondre uniquement à partir de ces passages, sans inventer de chiffre. Contient aussi le prompt système. |
+| `benchmark_llm.pdf` | Comparatif des modèles Ollama testés pour le LLM. |
 | `list.py`          | Affiche le contenu de la base : modèle d'embeddings utilisé, nombre de morceaux, puis chaque morceau (identifiant, taille, aperçu du texte) groupé par chapitre. Avec `--full`, affiche le texte complet. |
 | `rag.py`           | Code partagé par les scripts : connexion à ChromaDB, calcul des embeddings et appel du LLM via Ollama. |
 | `config.py`        | Tous les réglages (modèles, chemins, taille des morceaux, nombre de passages), modifiables par variables d'environnement. |
@@ -71,7 +73,7 @@ python api.py           # lance l'API sur http://127.0.0.1:8000
 
 Swagger : http://127.0.0.1:8000/docs
 
-Pour recharger après modification de l'histoire : `python clean.py` puis `python ingest.py`.
+Pour recharger après modification du dossier : `python clean.py` puis `python ingest.py`.
 
 ## Endpoints
 
@@ -81,7 +83,10 @@ Pour recharger après modification de l'histoire : `python clean.py` puis `pytho
 | POST    | `/search` | Passages retrouvés seulement (sans LLM), pour déboguer |
 | POST    | `/ask`    | Réponse du LLM + passages sources                      |
 
-Corps de requête : `{"question": "Comment s'appelle le cheval de Léo ?", "top_k": 4}`
+Corps de requête : `{"question": "Quel a été le chiffre d'affaires de Givaudan en 2025 ?", "top_k": 4}`
+
+Le détail de chaque champ (type, limites, exemple) et des codes d'erreur (422, 502, 503)
+est dans le Swagger : http://127.0.0.1:8000/docs. Le contrat brut est à http://127.0.0.1:8000/openapi.json.
 
 ## Configuration (variables d'environnement)
 
