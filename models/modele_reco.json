@@ -1,0 +1,104 @@
+{
+  "version": "1.0.0-2026-11-12",
+  "date_entrainement": "2026-11-12",
+  "extracteur": {
+    "type": "llm",
+    "modele_ollama": "qwen2.5:3b",
+    "variante_prompt": "few_shot",
+    "temperature": 0
+  },
+  "poids_axes": {
+    "chaleur": 1.0,
+    "fraicheur": 1.0,
+    "floral": 0.5,
+    "boise": 2.0,
+    "intensite": 2.0
+  },
+  "decoupage": {
+    "seed": 42,
+    "train_ids": [
+      1,
+      2,
+      4,
+      5,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      16,
+      20,
+      23,
+      24,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35,
+      36,
+      37,
+      39,
+      40
+    ],
+    "test_ids": [
+      3,
+      6,
+      7,
+      11,
+      12,
+      17,
+      18,
+      19,
+      21,
+      22,
+      25,
+      27,
+      34,
+      38
+    ]
+  },
+  "metriques_entrainement": {
+    "mae_extracteurs": {
+      "mots_cles": {
+        "global": 1.33,
+        "chaleur": 1.43,
+        "fraicheur": 1.96,
+        "floral": 1.39,
+        "boise": 1.04,
+        "intensite": 0.83
+      },
+      "zero_shot": {
+        "global": 1.62,
+        "chaleur": 1.61,
+        "fraicheur": 1.7,
+        "floral": 2.09,
+        "boise": 1.39,
+        "intensite": 1.3
+      },
+      "few_shot": {
+        "global": 1.3,
+        "chaleur": 1.04,
+        "fraicheur": 1.61,
+        "floral": 1.91,
+        "boise": 1.09,
+        "intensite": 0.87
+      }
+    },
+    "classement_poids_egaux": {
+      "hit@1": 0.478,
+      "hit@3": 0.783,
+      "mrr": 0.654,
+      "n": 23
+    },
+    "classement_poids_appris": {
+      "hit@1": 0.478,
+      "hit@3": 0.87,
+      "mrr": 0.664,
+      "n": 23
+    }
+  }
+}

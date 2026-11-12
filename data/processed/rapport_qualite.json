@@ -1,0 +1,166 @@
+{
+  "catalogue": {
+    "lignes_brutes": 493,
+    "ingredients_uniques": 411,
+    "doublons_fusionnes": 82,
+    "familles_contradictoires": 11,
+    "detail_conflits": [
+      {
+        "ingredient": "Aldehyde C 110 Undecylic",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Aldéhydé",
+          "Givaudan-Roure (code GR)": "Hespéridé (agrumes)"
+        },
+        "famille_retenue": "Aldéhydé"
+      },
+      {
+        "ingredient": "Cistulate",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Hespéridé (agrumes)",
+          "Quest International - Perfumer's Compendium": "Frais"
+        },
+        "famille_retenue": "Hespéridé (agrumes)"
+      },
+      {
+        "ingredient": "Dimetol",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Floral",
+          "Givaudan-Roure (code GR)": "Frais"
+        },
+        "famille_retenue": "Floral"
+      },
+      {
+        "ingredient": "Dupical",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Floral",
+          "Quest International - Perfumer's Compendium": "Aldéhydé"
+        },
+        "famille_retenue": "Floral"
+      },
+      {
+        "ingredient": "Isoraldeine 70",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Floral",
+          "Givaudan-Roure (code GR)": "Boisé"
+        },
+        "famille_retenue": "Floral"
+      },
+      {
+        "ingredient": "Isoraldeine 95",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Floral",
+          "Givaudan-Roure (code GR)": "Boisé"
+        },
+        "famille_retenue": "Floral"
+      },
+      {
+        "ingredient": "Jasmacyclene",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Floral",
+          "Quest International - Perfumer's Compendium": "Vert"
+        },
+        "famille_retenue": "Floral"
+      },
+      {
+        "ingredient": "Jasmatone",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Floral",
+          "Quest International - Perfumer's Compendium": "Épicé"
+        },
+        "famille_retenue": "Floral"
+      },
+      {
+        "ingredient": "Madrox",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Boisé",
+          "Givaudan-Roure (code GR)": "Tabac"
+        },
+        "famille_retenue": "Boisé"
+      },
+      {
+        "ingredient": "Pelargene",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Floral",
+          "Quest International - Perfumer's Compendium": "Vert"
+        },
+        "famille_retenue": "Floral"
+      },
+      {
+        "ingredient": "Undecavertol",
+        "familles": {
+          "Givaudan - catalogue ingrédients": "Vert",
+          "Givaudan-Roure (code GR)": "Floral"
+        },
+        "famille_retenue": "Vert"
+      }
+    ],
+    "ingredients_sans_odeur_exclus": 1,
+    "encore_au_catalogue_2024": 118
+  },
+  "formules": {
+    "formules": 13,
+    "lignes": 363,
+    "familles_par_source": {
+      "table manuelle": 207,
+      "catalogue": 148,
+      "solvant": 8
+    },
+    "fabricants_corriges": [
+      {
+        "id_formule": 1,
+        "ingredient": "BERRYFLOR",
+        "fabricant_ingredient": "Générique / naturel",
+        "fabricant": "Givaudan"
+      },
+      {
+        "id_formule": 3,
+        "ingredient": "GALAXOLIDE",
+        "fabricant_ingredient": "Générique / naturel",
+        "fabricant": "IFF"
+      },
+      {
+        "id_formule": 9,
+        "ingredient": "ETHYL LINALOOL",
+        "fabricant_ingredient": "Générique / naturel",
+        "fabricant": "Givaudan"
+      },
+      {
+        "id_formule": 9,
+        "ingredient": "HEXYL SALICYLATE",
+        "fabricant_ingredient": "Générique / naturel",
+        "fabricant": "Givaudan"
+      }
+    ],
+    "ingredients_sans_famille": []
+  },
+  "prix": {
+    "lignes": 300,
+    "devises": {
+      "USD": 294,
+      "GBP": 4,
+      "EUR": 2
+    },
+    "lignes_sans_taille": 57,
+    "produits_rapproches_du_catalogue": 69,
+    "produits_non_rapproches": [
+      "Acetyl Methyl Anthranilate",
+      "Ambermax 50%/Dowanol TPM",
+      "Ivy Dioxolane",
+      "Methyl Heptine Carbonate",
+      "Nerolidol",
+      "Nutty Pyrazine 0.1% DPG",
+      "Nympheal",
+      "PADMA (Viridine)",
+      "Paradisamide",
+      "Rose Crystals",
+      "Sotolone"
+    ],
+    "produits_avec_prix_reference_100g": 25,
+    "taux_de_change": {
+      "EUR": 1.0,
+      "USD": 0.86,
+      "GBP": 1.15
+    },
+    "taux_date": "2026-11-12 (valeurs approximatives)"
+  }
+}

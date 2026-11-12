@@ -1,0 +1,490 @@
+{
+  "modele": {
+    "version": "1.0.0-2026-11-12",
+    "poids_axes": {
+      "chaleur": 1.0,
+      "fraicheur": 1.0,
+      "floral": 0.5,
+      "boise": 2.0,
+      "intensite": 2.0
+    },
+    "variante_prompt": "few_shot",
+    "llm": "qwen2.5:3b"
+  },
+  "jeu_de_test": {
+    "n": 14,
+    "ids": [
+      3,
+      6,
+      7,
+      11,
+      12,
+      17,
+      18,
+      19,
+      21,
+      22,
+      25,
+      27,
+      34,
+      38
+    ]
+  },
+  "resultats": {
+    "A_mots_cles_poids_egaux": {
+      "classement": {
+        "hit@1": 0.429,
+        "hit@3": 0.571,
+        "mrr": 0.57,
+        "n": 14
+      },
+      "mae_scores": {
+        "global": 1.4,
+        "chaleur": 1.64,
+        "fraicheur": 2.36,
+        "floral": 1.14,
+        "boise": 1.07,
+        "intensite": 0.79
+      }
+    },
+    "B_llm_poids_egaux": {
+      "classement": {
+        "hit@1": 0.5,
+        "hit@3": 0.571,
+        "mrr": 0.61,
+        "n": 14
+      },
+      "mae_scores": {
+        "global": 1.31,
+        "chaleur": 1.86,
+        "fraicheur": 1.64,
+        "floral": 1.43,
+        "boise": 0.86,
+        "intensite": 0.79
+      }
+    },
+    "C_llm_poids_appris_MODELE_FINAL": {
+      "classement": {
+        "hit@1": 0.429,
+        "hit@3": 0.643,
+        "mrr": 0.596,
+        "n": 14
+      },
+      "mae_scores": {
+        "global": 1.31,
+        "chaleur": 1.86,
+        "fraicheur": 1.64,
+        "floral": 1.43,
+        "boise": 0.86,
+        "intensite": 0.79
+      }
+    },
+    "D_oracle_scores_attendus_poids_appris": {
+      "classement": {
+        "hit@1": 0.357,
+        "hit@3": 0.643,
+        "mrr": 0.554,
+        "n": 14
+      }
+    }
+  },
+  "latence_llm_s": {
+    "mediane": 4.4,
+    "max": 9.7
+  },
+  "detail_par_cas": [
+    {
+      "id": 3,
+      "description": "Laverie automatique : odeur de linge propre, douce et fraîche",
+      "scores_attendus": {
+        "chaleur": 2,
+        "fraicheur": 7,
+        "floral": 6,
+        "boise": 1,
+        "intensite": 4
+      },
+      "scores_llm": {
+        "chaleur": 1,
+        "fraicheur": 9,
+        "floral": 1,
+        "boise": 1,
+        "intensite": 5
+      },
+      "top3": [
+        "Key Lime cream",
+        "AP Roll-on UR1007",
+        "Shampoo HR1009"
+      ],
+      "pertinentes": [
+        "Fabric conditioner LR1007",
+        "Shower gel GM1006"
+      ],
+      "rang_premiere_pertinente": 6
+    },
+    {
+      "id": 6,
+      "description": "Boutique de lingerie féminine, odeur florale, poudrée et musquée, élégante",
+      "scores_attendus": {
+        "chaleur": 5,
+        "fraicheur": 2,
+        "floral": 9,
+        "boise": 2,
+        "intensite": 5
+      },
+      "scores_llm": {
+        "chaleur": 2,
+        "fraicheur": 1,
+        "floral": 9,
+        "boise": 1,
+        "intensite": 6
+      },
+      "top3": [
+        "Shower gel GM1006",
+        "Fabric conditioner LR1007",
+        "Vert de figue basilic"
+      ],
+      "pertinentes": [
+        "Feminine FG1006",
+        "Feminine FM1006"
+      ],
+      "rang_premiere_pertinente": 6
+    },
+    {
+      "id": 7,
+      "description": "Fleuriste : je veux que ça sente les fleurs fraîches et le vert, comme un jardin",
+      "scores_attendus": {
+        "chaleur": 2,
+        "fraicheur": 6,
+        "floral": 9,
+        "boise": 2,
+        "intensite": 4
+      },
+      "scores_llm": {
+        "chaleur": 1,
+        "fraicheur": 9,
+        "floral": 9,
+        "boise": 1,
+        "intensite": 4
+      },
+      "top3": [
+        "Shampoo HR1009",
+        "Shower gel GM1006",
+        "Vert de figue basilic"
+      ],
+      "pertinentes": [
+        "Vert de figue basilic",
+        "Shower gel GM1006"
+      ],
+      "rang_premiere_pertinente": 2
+    },
+    {
+      "id": 11,
+      "description": "Concept store de mode masculine, sobre, boisé et un peu épicé",
+      "scores_attendus": {
+        "chaleur": 6,
+        "fraicheur": 2,
+        "floral": 1,
+        "boise": 9,
+        "intensite": 6
+      },
+      "scores_llm": {
+        "chaleur": 4,
+        "fraicheur": 1,
+        "floral": 0,
+        "boise": 9,
+        "intensite": 5
+      },
+      "top3": [
+        "AP Roll-on UR1007",
+        "Masculine MM1006",
+        "Feminine FM1006"
+      ],
+      "pertinentes": [
+        "Masculine MM1006",
+        "AP Roll-on UR1007"
+      ],
+      "rang_premiere_pertinente": 1
+    },
+    {
+      "id": 12,
+      "description": "Hôtel boutique, hall d'accueil, floral élégant et chic, présence discrète",
+      "scores_attendus": {
+        "chaleur": 4,
+        "fraicheur": 3,
+        "floral": 8,
+        "boise": 3,
+        "intensite": 4
+      },
+      "scores_llm": {
+        "chaleur": 1,
+        "fraicheur": 1,
+        "floral": 9,
+        "boise": 1,
+        "intensite": 3
+      },
+      "top3": [
+        "Shower gel GM1006",
+        "Shampoo HR1009",
+        "Fabric conditioner LR1007"
+      ],
+      "pertinentes": [
+        "Feminine FM1006",
+        "Feminine FG1006"
+      ],
+      "rang_premiere_pertinente": 7
+    },
+    {
+      "id": 17,
+      "description": "Pharmacie-parapharmacie, odeur propre, neutre, très légère, rassurante",
+      "scores_attendus": {
+        "chaleur": 2,
+        "fraicheur": 7,
+        "floral": 4,
+        "boise": 1,
+        "intensite": 2
+      },
+      "scores_llm": {
+        "chaleur": 1,
+        "fraicheur": 9,
+        "floral": 1,
+        "boise": 1,
+        "intensite": 2
+      },
+      "top3": [
+        "Key Lime cream",
+        "Shampoo HR1009",
+        "AP Roll-on UR1007"
+      ],
+      "pertinentes": [
+        "Shower gel GM1006",
+        "Shampoo HR1009",
+        "Fabric conditioner LR1007"
+      ],
+      "rang_premiere_pertinente": 2
+    },
+    {
+      "id": 18,
+      "description": "Crêperie bretonne, odeur gourmande, chaleureuse, caramel et vanille",
+      "scores_attendus": {
+        "chaleur": 9,
+        "fraicheur": 0,
+        "floral": 1,
+        "boise": 1,
+        "intensite": 6
+      },
+      "scores_llm": {
+        "chaleur": 9,
+        "fraicheur": 1,
+        "floral": 2,
+        "boise": 1,
+        "intensite": 5
+      },
+      "top3": [
+        "Blueberry muffin",
+        "Grenadine mandarin",
+        "Mango peach"
+      ],
+      "pertinentes": [
+        "Blueberry muffin"
+      ],
+      "rang_premiere_pertinente": 1
+    },
+    {
+      "id": 19,
+      "description": "Boutique de bougies, odeur cosy et réconfortante, chaude et douce",
+      "scores_attendus": {
+        "chaleur": 8,
+        "fraicheur": 1,
+        "floral": 3,
+        "boise": 4,
+        "intensite": 5
+      },
+      "scores_llm": {
+        "chaleur": 9,
+        "fraicheur": 1,
+        "floral": 1,
+        "boise": 2,
+        "intensite": 7
+      },
+      "top3": [
+        "Blueberry muffin",
+        "Mango peach",
+        "Feminine FM1006"
+      ],
+      "pertinentes": [
+        "Blueberry muffin",
+        "Quince rum"
+      ],
+      "rang_premiere_pertinente": 1
+    },
+    {
+      "id": 21,
+      "description": "Bijouterie de luxe, parfum floral raffiné, rose et jasmin, avec une note musquée",
+      "scores_attendus": {
+        "chaleur": 5,
+        "fraicheur": 2,
+        "floral": 9,
+        "boise": 3,
+        "intensite": 6
+      },
+      "scores_llm": {
+        "chaleur": 2,
+        "fraicheur": 1,
+        "floral": 9,
+        "boise": 1,
+        "intensite": 5
+      },
+      "top3": [
+        "Shower gel GM1006",
+        "Fabric conditioner LR1007",
+        "Vert de figue basilic"
+      ],
+      "pertinentes": [
+        "Feminine FM1006",
+        "Feminine FG1006"
+      ],
+      "rang_premiere_pertinente": 6
+    },
+    {
+      "id": 22,
+      "description": "Glacier : fraîcheur fruitée, citron, crème glacée",
+      "scores_attendus": {
+        "chaleur": 4,
+        "fraicheur": 7,
+        "floral": 2,
+        "boise": 0,
+        "intensite": 4
+      },
+      "scores_llm": {
+        "chaleur": 1,
+        "fraicheur": 9,
+        "floral": 1,
+        "boise": 1,
+        "intensite": 5
+      },
+      "top3": [
+        "Key Lime cream",
+        "AP Roll-on UR1007",
+        "Shampoo HR1009"
+      ],
+      "pertinentes": [
+        "Key Lime cream"
+      ],
+      "rang_premiere_pertinente": 1
+    },
+    {
+      "id": 25,
+      "description": "Salon esthétique pour femmes, floral fruité, doux et féminin",
+      "scores_attendus": {
+        "chaleur": 4,
+        "fraicheur": 4,
+        "floral": 8,
+        "boise": 1,
+        "intensite": 4
+      },
+      "scores_llm": {
+        "chaleur": 3,
+        "fraicheur": 1,
+        "floral": 8,
+        "boise": 1,
+        "intensite": 5
+      },
+      "top3": [
+        "Fabric conditioner LR1007",
+        "Shower gel GM1006",
+        "Vert de figue basilic"
+      ],
+      "pertinentes": [
+        "Feminine FM1006",
+        "Feminine FG1006",
+        "Grenadine mandarin"
+      ],
+      "rang_premiere_pertinente": 5
+    },
+    {
+      "id": 27,
+      "description": "Cabinet de massage, odeur douce et relaxante, florale et musquée, très légère",
+      "scores_attendus": {
+        "chaleur": 4,
+        "fraicheur": 3,
+        "floral": 7,
+        "boise": 2,
+        "intensite": 2
+      },
+      "scores_llm": {
+        "chaleur": 2,
+        "fraicheur": 1,
+        "floral": 9,
+        "boise": 1,
+        "intensite": 1
+      },
+      "top3": [
+        "Shampoo HR1009",
+        "Shower gel GM1006",
+        "Fabric conditioner LR1007"
+      ],
+      "pertinentes": [
+        "Feminine FM1006",
+        "Shower gel GM1006"
+      ],
+      "rang_premiere_pertinente": 2
+    },
+    {
+      "id": 34,
+      "description": "Parfumerie de niche, floral boisé musqué, sophistiqué et intense",
+      "scores_attendus": {
+        "chaleur": 5,
+        "fraicheur": 2,
+        "floral": 7,
+        "boise": 6,
+        "intensite": 8
+      },
+      "scores_llm": {
+        "chaleur": 2,
+        "fraicheur": 1,
+        "floral": 9,
+        "boise": 7,
+        "intensite": 8
+      },
+      "top3": [
+        "Feminine FM1006",
+        "Feminine FG1006",
+        "AP Roll-on UR1007"
+      ],
+      "pertinentes": [
+        "Feminine FG1006",
+        "Feminine FM1006",
+        "Masculine MM1006"
+      ],
+      "rang_premiere_pertinente": 1
+    },
+    {
+      "id": 38,
+      "description": "Bar à jus de fruits, frais, agrumes, mangue",
+      "scores_attendus": {
+        "chaleur": 3,
+        "fraicheur": 7,
+        "floral": 2,
+        "boise": 0,
+        "intensite": 5
+      },
+      "scores_llm": {
+        "chaleur": 1,
+        "fraicheur": 9,
+        "floral": 0,
+        "boise": 1,
+        "intensite": 5
+      },
+      "top3": [
+        "Key Lime cream",
+        "AP Roll-on UR1007",
+        "Shampoo HR1009"
+      ],
+      "pertinentes": [
+        "Mango peach",
+        "Key Lime cream"
+      ],
+      "rang_premiere_pertinente": 1
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+id;description;chaleur;fraicheur;floral;boise;intensite;formules_pertinentes;note
+1;Salon de thé et pâtisserie, on veut une odeur gourmande de gâteau aux fruits rouges qui donne faim;9;1;2;1;6;1|3;exemple du prompt
+2;Boulangerie artisanale : une odeur chaude et sucrée, vanillée, très accueillante;9;0;1;2;6;1;
+3;Laverie automatique : odeur de linge propre, douce et fraîche;2;7;6;1;4;2|8;
+4;Spa et institut de beauté, ambiance fraîche et zen, agrumes et citron vert, très léger;1;9;3;1;2;4|7;exemple du prompt
+5;Barbier pour hommes, odeur boisée, virile, cuir et bois de cèdre, assez intense;6;1;0;9;8;12;exemple du prompt
+6;Boutique de lingerie féminine, odeur florale, poudrée et musquée, élégante;5;2;9;2;5;10|11;
+7;Fleuriste : je veux que ça sente les fleurs fraîches et le vert, comme un jardin;2;6;9;2;4;9|8;
+8;Épicerie fine italienne, ambiance méditerranéenne, figue, basilic, herbes fraîches;2;7;4;3;5;9;
+9;Bar à cocktails tropical, mangue, pêche, fruits exotiques, ambiance festive;4;5;4;0;6;5|3;
+10;Salle de sport : fraîcheur intense, énergisante, propre;1;9;2;2;7;13|7|4;
+11;Concept store de mode masculine, sobre, boisé et un peu épicé;6;2;1;9;6;12|13;
+12;Hôtel boutique, hall d'accueil, floral élégant et chic, présence discrète;4;3;8;3;4;11|10;
+13;Coiffeur : odeur de shampooing propre, fraîche, un peu florale;2;8;5;1;4;7|8;
+14;Magasin de bonbons pour enfants, odeur fruitée et sucrée, fraise, grenadine;7;3;4;0;6;3|1;
+15;Cave à rhum et cigares, chaleureux, fruité, ambré;8;1;3;4;7;6;
+16;Boutique de produits bio, odeur naturelle, verte, herbacée, pas trop forte;1;7;3;3;3;9|13;
+17;Pharmacie-parapharmacie, odeur propre, neutre, très légère, rassurante;2;7;4;1;2;8|7|2;
+18;Crêperie bretonne, odeur gourmande, chaleureuse, caramel et vanille;9;0;1;1;6;1;
+19;Boutique de bougies, odeur cosy et réconfortante, chaude et douce;8;1;3;4;5;1|6;
+20;Studio de yoga : ambiance apaisante, lavande, herbes, sauge;2;6;4;4;3;13|9;
+21;Bijouterie de luxe, parfum floral raffiné, rose et jasmin, avec une note musquée;5;2;9;3;6;11|10;
+22;Glacier : fraîcheur fruitée, citron, crème glacée;4;7;2;0;4;4;
+23;Magasin de surf, ambiance marine et océan, fraîche;1;9;1;2;4;4|7|8;
+24;Librairie café, odeur chaleureuse, boisée, un peu sucrée;7;1;1;7;4;12|1|6;
+25;Salon esthétique pour femmes, floral fruité, doux et féminin;4;4;8;1;4;11|10|3;
+26;Boutique de vélos haut de gamme, frais, boisé, sportif;2;7;1;7;5;13|12;
+27;Cabinet de massage, odeur douce et relaxante, florale et musquée, très légère;4;3;7;2;2;11|8;
+28;Fromagerie : odeur fraîche et verte pour équilibrer, herbes et un peu d'agrumes;1;8;3;3;4;9|4|7;
+29;Boutique de vêtements pour ados, fruité, pétillant, énergique;4;6;4;0;7;5|3;
+30;Showroom de meubles en bois, odeur de bois noble, santal et cèdre;5;1;1;10;6;12;
+31;Boutique de cosmétiques naturels, odeur de propreté florale, savonneuse;2;6;7;1;4;8|2|7;
+32;Bar à vins, chaleureux, fruits mûrs, un peu épicé;7;2;3;3;6;6|5;
+33;Agence immobilière, odeur neutre et fraîche, professionnelle, discrète;2;7;3;3;2;7|8|13;
+34;Parfumerie de niche, floral boisé musqué, sophistiqué et intense;5;2;7;6;8;10|11|12;
+35;Magasin de jouets, fruité, gai, fraise et fruits rouges;6;4;3;0;5;3|1;
+36;Salle d'attente de dentiste, fraîcheur mentholée et propre, apaisante;1;9;2;1;3;7|4|13;
+37;Boutique de chaussures en cuir, odeur boisée et cuirée, chaude;7;1;0;9;7;12;
+38;Bar à jus de fruits, frais, agrumes, mangue;3;7;2;0;5;5|4;
+39;Institut de soins capillaires, frais, propre, floral léger;2;7;6;1;3;7|8;
+40;Boutique déco scandinave, odeur fraîche, cotonneuse, linge propre;2;7;5;2;3;2|8;

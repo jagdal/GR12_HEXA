@@ -20,3 +20,9 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Cache des réponses du LLM (régénéré automatiquement)
+data/cache/
+
+# Brouillons Word locaux
+*.docx
